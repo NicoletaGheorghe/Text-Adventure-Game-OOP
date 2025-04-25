@@ -164,6 +164,7 @@ let rescuedAnimals = 0;
 const output = document.getElementById("gameDescription");
 const result = document.getElementById("result") 
 
+
 function displayField(field){
     const fieldText = document.getElementById("gameDescription");
     const describeField = document.getElementById("describeField");
@@ -180,6 +181,7 @@ function displayField(field){
     bkGameSpace.style.backgroundImage =`url(${currentField.backgroundImage})`;
     bkGameSpace.style.backgroundSize = "cover";
     bkGameSpace.style.opacity = "0.8";
+      
 }
 function checkWin(){
     const inputBox = document.getElementById("userInput");
@@ -200,6 +202,7 @@ function checkWin(){
 document.addEventListener("keydown", function(e){
     if(e.key === "Enter"){
        const inputBox = document.getElementById("userInput");
+       
        const command = inputBox.value.trim().toLowerCase();
        const directions = ["north", "south", "east", "west", "start"];
        
