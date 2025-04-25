@@ -20,7 +20,9 @@
         border-radius: 15px;
     }
     #gameDescription{
-        color: white;
+        color: red;
+        font-weight: bold;
+        text-shadow: 1px 1px black;
         
     }
     #userInput{
@@ -61,8 +63,6 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 0;
-        border: 3px solid rgb(244, 143, 143);
-        box-shadow: 3px 3px rgb(200, 163, 163);
         border-radius: 15px;
     }
     #gameSpace{
@@ -74,9 +74,9 @@
         font-size: 13px;
     }
     #gameDescription{
-        color: white;
+        color: red;
         font-weight: bold;
-        
+        text-shadow: 1px 1px black;
     }
     #userInput{
         width: 486px;
