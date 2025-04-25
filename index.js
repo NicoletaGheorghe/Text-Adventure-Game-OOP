@@ -184,10 +184,17 @@ function displayField(field){
 function checkWin(){
     const inputBox = document.getElementById("userInput");
     if(heartsInventory === 3 && rescuedAnimals === 4){
-        result.innerHTML += `<p>Congratulations!You have saved all the animals and collected all the hearts.<strong>You win!</strong></p>`
+        result.innerHTML += `<p><strong>Congratulations!</strong> You have saved all the animals and collected all the hearts.<strong> You win!</strong> Tap the Home icon to start again.</p>`
+        inputBox.disabled = true;
+    }else if(rescuedAnimals === 4 && heartsInventory < 3){
+        result.innerHTML += `<p><strong>Oops!</strong> You saved all the animals but didn't collect enough hearts. So close! <strong>You lose!</strong> Tap the Home icon to start again.</p>`
+        inputBox.disabled = true;
+    }else if(heartsInventory === 3 && rescuedAnimals < 3){
+        result.innerHTML += `<p><strong>Ouch!</strong> You grabbed all the hearts but forgot to save the animals. Poor little buddies. <strong>You lose!</strong> Tap the Home icon to start again.</p>`
         inputBox.disabled = true;
     }
-    return output;
+    
+    return result;
 }
 
 document.addEventListener("keydown", function(e){
